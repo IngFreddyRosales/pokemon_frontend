@@ -84,16 +84,12 @@ export default function UserManagement() {
                     filteredData[key] = value;
                 }
             });
+            await updateUser(selectedUser.id, filteredData);
+            setShowModal(false);
 
-            if (Object.keys(filteredData).length > 0) {
-                await updateUser(selectedUser.id, filteredData);
-                setShowModal(false);
+            const users = await getAllUser();
+            setUsers(users)
 
-                const users = await getAllUser();
-                setUsers(users)
-            } else {
-                setModalError('No se detectaron cambios para guardar.');
-            }
         } catch (err) {
             setModalError(err.message || 'Error al actualizar el usuario.');
         } finally {
