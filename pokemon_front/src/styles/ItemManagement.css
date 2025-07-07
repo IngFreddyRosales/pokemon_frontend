@@ -1,0 +1,63 @@
+/* Layout */
+.item-mgmt-container {
+  display: flex;
+  min-height: calc(100vh - 20px); /* Ajusta si Header tiene otra altura */
+  margin-top: 70px; /* Ajusta este valor según la altura del Header */
+}
+
+.sidebar {
+  flex: 0 0 220px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  padding-top: 1rem;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+/* Títulos */
+.page-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #343a40;
+}
+
+/* Loading */
+.loading-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Tabla */
+.item-table {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+}
+
+.item-table .thead-dark th {
+  background-color: #343a40;
+  color: #fff;
+  border-color: #454d55;
+}
+
+.item-table tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+/* Imagen */
+.item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-table .btn {
+  width: 80px;
+}
